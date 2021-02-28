@@ -102,7 +102,7 @@ class ConvGRU(nn.Module):
 
         # Implement stateful ConvGRU
         if hidden_state is not None:
-            raise NotImplementedError()
+            hidden_state = hidden_state
         else:
             b, _, _, h, w = input_tensor.shape
             hidden_state = self._init_hidden(b, h, w)
